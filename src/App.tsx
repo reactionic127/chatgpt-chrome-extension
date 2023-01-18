@@ -1,5 +1,6 @@
 import React from 'react';
 import { DOMMessage, DOMMessageResponse } from './types';
+import chatgptIcon from './assets/images/chatgpt.jpeg';
 import './App.css';
 
 function App() {
@@ -35,9 +36,23 @@ function App() {
   console.log(title, headlines);
 
   return (
-    <div className="App">
+    <div className="app">
       <div className="header">
+        <img src={chatgptIcon} alt="chatgpt-icon" className="chatgpt-icon" />
         <h3>ChatGPT Chrome Extension</h3>
+      </div>
+      <div className="tip">
+        <span>Tip: setup shortcuts for faster access</span>
+      </div>
+      <div className="main-content">
+        <div>
+          <span className="explain-text">
+            Please login and pass Cloudflare check at
+          </span>
+        </div>
+        <div className="link-text">
+          <a href="https://chat.openai.com" target="_blank" rel="noreferrer">chat.openai.com</a>
+        </div>
       </div>
     </div>
   );
